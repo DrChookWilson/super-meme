@@ -1,0 +1,38 @@
+<!doctype html>
+<!--Welcome to the first example/activity of the Campus Clubs Program
+In this example you will learn to build a Cube!
+
+Can you make a red cube with width 4, depth 5 and height 2?
+
+Enjoy
+-->
+
+<html>
+<head>
+  <title>Cube</title>
+  <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+</head>
+<body>
+
+<a-scene>
+  <a-sphere radius=".5" color="red" position="2 2 2">
+    <a-animation attribute="position" from="2 2 2" to="0 0 0" dur="1900" repeat="indefinite" fill="forwards" direction="alternate"></a-animation>
+  </a-sphere>
+  <a-sphere radius=".5" color="blue" position="-2 2 -2">
+    <a-animation attribute="position" from="-2 2 -2" to="0 0 0" dur="900" repeat="indefinite" fill="forwards" direction="alternate"></a-animation>
+  </a-sphere>
+  <a-sphere radius=".5" color="white" position="5 -2 3">
+    <a-animation attribute="position" from="5 -2 3" to="0 0 0" dur="1200" repeat="indefinite" fill="forwards" direction="alternate"></a-animation>
+  </a-sphere>
+  <a-sphere radius=".5" color="orange" position="5 0 -2">
+    <a-animation attribute="position" from="5 0 -2" to="0 0 0" dur="1500" repeat="indefinite" fill="forwards" direction="alternate"></a-animation>
+  </a-sphere>
+  <a-sphere radius=".5" color="orange" position="-3 -4 -5">
+    <a-animation attribute="position" from="5 0 -2" to="0 0 0" dur="1700" repeat="indefinite" fill="forwards" direction="alternate"></a-animation>
+  </a-sphere>
+
+  <a-sky src="https://c1.staticflickr.com/1/154/406447106_db2169ac87_b.jpg"></a-sky>
+</a-scene>
+
+</body>
+</html>

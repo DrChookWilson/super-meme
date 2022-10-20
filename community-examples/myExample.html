@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+LET'S GET MOVING!
+In this example we will make a moving entity!
+
+Can you make a sphere following a moving cube instead?
+-->
+<html>
+<head>
+  <title>Movement</title>
+  <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+</head>
+<body>
+
+<a-scene>
+   <a-sky src="http://www.gigapixel.com//image/gigapan_paris_shang360.jpg" color="black"></a-sky>
+   <!-- A camera  -->
+   <a-camera id="camera" position="0 1.8 4"></a-camera>
+
+   <!-- A target entity -->
+   <a-cylinder id="target" color="#404040" radius="0.5"  height="0.1">
+     <a-animation attribute="position" from="-4 0 0" to="4 0 0" dur="1500" repeat="indefinite" fill="forwards" direction="normal"></a-animation>
+   </a-cylinder>
+
+   <!-- Entities look at the target -->
+   <a-cube width="1" depth="1" height="1" color="#4CC3D9" look-at="#target" position="-4 1 -2"></a-cube>
+   <a-cylinder radius="0.6" height="2" color="#7BC8A4" look-at="#target" position="0 1 -2"></a-cylinder>
+   <a-cube width="0.5" depth="1" height="2" color="#F16745" look-at="#target" position="4 1 -2"></a-cube>
+   <a-cylinder radius="0.2" height="2" color="#7BC8A4" look-at="#target" position="-4 1 1"></a-cylinder>
+   <a-cube width="2" depth="1" height="0.25" color="#93648D" look-at="#target" position="0 1 1"></a-cube>
+   <a-cube width="1" depth="2" height="0.5" color="#999" look-at="#target" position="4 1 1"></a-cube>
+   <a-plane rotation="-90 0 0" width="10" height="4" color="white"></a-plane>
+   <!-- This entity looks at the camera. Use WASD controls to test it -->
+
+   <a-image position="0 -1.2 0" src="../_images/radial-highlight-1.png" rotation="-90 0 0" scale="10 10 10"></a-image>
+
+</a-scene>
+
+</body>
+</html>
